@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pruebaTecnica';
+  data=JSON.stringify({ uno: 1, dos : 2 }, null, '\t')
 }

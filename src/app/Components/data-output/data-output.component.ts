@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataFormService } from 'src/app/Services/data-form.service';
 
 @Component({
   selector: 'app-data-output',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-output.component.css']
 })
 export class DataOutputComponent implements OnInit {
-
-  constructor() { }
+  constructor(private dataService:DataFormService) { }
 
   ngOnInit() {
   }

@@ -1,1 +1,9 @@
-<p>text-input works!</p>
+<div class="container">
+    <h3>Digite el texto</h3>
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" [(ngModel)]="dataService.text"></textarea>
+      </div>
+</div>
