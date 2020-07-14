@@ -1,14 +1,18 @@
-<div class="container">
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="modelChanged($event)">
-        <label class="form-check-label" for="exampleCheck1">Texto X</label>
+<div class="container border p-3 mt-2">
+    <h5>Seleccione los campos que tendrá el formulario</h5>
+    <div class="form-check form-check-inline pl-3">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" [(ngModel)]="textSectionFlag" [disabled]="textDisabled">
+        <label class="form-check-label" for="inlineCheckbox1">Texto</label>
     </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-        <label class="form-check-label" for="exampleCheck2">Rango</label>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" [(ngModel)]="dateSectionFlag" [disabled]="dateDisabled">
+        <label class="form-check-label" for="inlineCheckbox2">Fecha</label>
     </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-        <label class="form-check-label" for="exampleCheck3">Fecha</label>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" [(ngModel)]="rangeSectionFlag" [disabled]="rangeDisabled">
+        <label class="form-check-label" for="inlineCheckbox3">Rango</label>
+    </div>
+    <div class="nav justify-content-end">
+        <button *ngIf="createVisible" type="button" class="btn btn-primary" (click)="createForm()" [disabled]="!(rangeSectionFlag || dateSectionFlag || textSectionFlag)">Crear</button>
     </div>
 </div>

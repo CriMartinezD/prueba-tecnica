@@ -1,7 +1,14 @@
-<app-filter></app-filter>
 
-<app-date-input></app-date-input>
-<app-range-input></app-range-input>
-<app-text-input></app-text-input>
-
-<app-data-output></app-data-output>
+    <app-filter (sectionFlags)="getSectionsFlags($event)" ></app-filter>
+    <div class="container border">
+    
+    <app-text-input *ngIf="textSectionFlag"></app-text-input>
+    <app-date-input *ngIf="dateSectionFlag"></app-date-input>
+    <app-range-input *ngIf="rangeSectionFlag"></app-range-input>
+    
+    <div class="nav justify-content-end" *ngIf="sendVisible">
+        <button type="button" class="btn btn-primary" (click)="sendForm()">Enviar</button>
+    </div>
+    
+    <app-data-output *ngIf="dataSectionFlag"></app-data-output>
+</div>
