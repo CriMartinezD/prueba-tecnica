@@ -1,5 +1,5 @@
 
-    <app-filter (sectionFlags)="getSectionsFlags($event)" ></app-filter>
+    <app-filter (sectionFlags)="getSectionsFlags($event)" (onReset)="ngOnInit()" ></app-filter>
     <div class="container border">
     
     <app-text-input *ngIf="textSectionFlag"></app-text-input>

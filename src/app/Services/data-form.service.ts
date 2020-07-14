@@ -19,4 +19,9 @@ export class DataFormService {
       .replace(/ /g, '&nbsp;')
       .replace(/\n/g, '<br/>');
   }
+  resetData() {
+    this.text = ""
+    this.range = 0;
+    this.date = null;
+  }
 }

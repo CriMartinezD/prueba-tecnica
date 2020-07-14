@@ -6,29 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private textSectionFlag:boolean=false;
-  private dateSectionFlag:boolean=false;
-  private rangeSectionFlag:boolean=false;
-  private sendVisible:boolean=false;
-  private createVisible:boolean=true;
-  private dataSectionFlag:boolean=false;
+  private textSectionFlag: boolean;
+  private dateSectionFlag: boolean;
+  private rangeSectionFlag: boolean;
+  private sendVisible: boolean;
+  private createVisible: boolean;
+  private dataSectionFlag: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.textSectionFlag = false;
+    this.dateSectionFlag = false;
+    this.rangeSectionFlag = false;
+    this.sendVisible = false;
+    this.createVisible = true;
+    this.dataSectionFlag = false;
   }
-  getSectionsFlags(sectionsFlags){
-    this.textSectionFlag=sectionsFlags.textSectionFlag;
-    this.dateSectionFlag=sectionsFlags.dateSectionFlag;
-    this.rangeSectionFlag=sectionsFlags.rangeSectionFlag;
+  getSectionsFlags(sectionsFlags) {
+    this.textSectionFlag = sectionsFlags.textSectionFlag;
+    this.dateSectionFlag = sectionsFlags.dateSectionFlag;
+    this.rangeSectionFlag = sectionsFlags.rangeSectionFlag;
 
-    this.sendVisible=true;
+    this.sendVisible = true;
   }
-  sendForm(){
-    this.textSectionFlag=false;
-    this.dateSectionFlag=false;
-    this.rangeSectionFlag=false;
-    this.dataSectionFlag=true;
-    this.sendVisible=false;
+  sendForm() {
+    this.textSectionFlag = false;
+    this.dateSectionFlag = false;
+    this.rangeSectionFlag = false;
+    this.dataSectionFlag = true;
+    this.sendVisible = false;
   }
 
 }
