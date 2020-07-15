@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +10,17 @@ export class DataFormService {
 
   constructor() { }
   getDataHTML() {
+    console.log(this.date)
+    console.log(this.date.getUTCMonth())
+    let dateToShow;
+    if (this.date == null || this.date == undefined) {
+      dateToShow = "00/00/0000";
+    } else {
+      dateToShow = this.date.getUTCDate() + '/' + (this.date.getUTCMonth()+1) + '/' + this.date.getUTCFullYear();
+    }
     let dataform = {
       texto: this.text,
-      fecha: "00/00/0000",
+      fecha: dateToShow,
       cantidad: this.range.toString()
     }
     return JSON.stringify(dataform, null, 4)

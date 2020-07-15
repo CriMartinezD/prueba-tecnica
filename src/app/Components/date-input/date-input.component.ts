@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataFormService } from 'src/app/Services/data-form.service';
 
 @Component({
   selector: 'app-date-input',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateInputComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService:DataFormService) { }
 
   ngOnInit() {
   }

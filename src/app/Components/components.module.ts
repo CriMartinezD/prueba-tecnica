@@ -7,13 +7,16 @@ import { DataOutputComponent } from './data-output/data-output.component';
 import { FilterComponent } from './filter/filter.component';
 import { FormsModule } from '@angular/forms';
 
-
+import {MatDatepickerModule,MatInputModule, MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material'
 
 @NgModule({
   declarations: [RangeInputComponent, TextInputComponent, DateInputComponent, DataOutputComponent, FilterComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule, 
+    MatInputModule,
+    MatNativeDateModule,
   ],
   exports:
   [
@@ -23,6 +26,9 @@ import { FormsModule } from '@angular/forms';
     DateInputComponent,
     DataOutputComponent,
     FilterComponent
-  ]
+  ],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'es'},
+  ],
 })
 export class ComponentsModule { }
