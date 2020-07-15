@@ -1,14 +1,14 @@
+<app-filter (sectionFlags)="getSectionsFlags($event)" (onReset)="ngOnInit()"></app-filter>
+<div class="container border">
+    <div class="row">
+        <app-text-input class="col" *ngIf="textSectionFlag"></app-text-input>
+        <app-date-input class="col" *ngIf="dateSectionFlag"></app-date-input>
+        <app-range-input class="col" *ngIf="rangeSectionFlag"></app-range-input>
+    </div>
 
-    <app-filter (sectionFlags)="getSectionsFlags($event)" (onReset)="ngOnInit()" ></app-filter>
-    <div class="container border">
-    
-    <app-text-input *ngIf="textSectionFlag"></app-text-input>
-    <app-date-input *ngIf="dateSectionFlag"></app-date-input>
-    <app-range-input *ngIf="rangeSectionFlag"></app-range-input>
-    
-    <div class="nav justify-content-end" *ngIf="sendVisible">
+    <div class="nav justify-content-end mt-2" *ngIf="sendVisible">
         <button type="button" class="btn btn-primary" (click)="sendForm()">Enviar</button>
     </div>
-    
+
     <app-data-output *ngIf="dataSectionFlag"></app-data-output>
 </div>

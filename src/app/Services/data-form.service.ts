@@ -13,7 +13,7 @@ export class DataFormService {
     let dataform = {
       texto: this.text,
       fecha: "00/00/0000",
-      cantidad: "5"
+      cantidad: this.range
     }
     return JSON.stringify(dataform, null, 4)
       .replace(/ /g, '&nbsp;')
