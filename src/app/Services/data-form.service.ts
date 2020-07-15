@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class DataFormService {
     let dataform = {
       texto: this.text,
       fecha: "00/00/0000",
-      cantidad: this.range
+      cantidad: this.range.toString()
     }
     return JSON.stringify(dataform, null, 4)
       .replace(/ /g, '&nbsp;')
