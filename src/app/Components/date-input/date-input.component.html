@@ -1,7 +1,7 @@
 <div class="container border p-4 mt-5" style="height:80%;">
   <h6>Seleccione la fecha </h6>
-  <mat-form-field appearance="fill">
-    <input matInput [matDatepicker]="picker" [(ngModel)]="dataService.date" placeholder="fecha">
+  <mat-form-field style="width: 100%;" class="pt-3">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="dataService.date" placeholder="00/00/0000">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
